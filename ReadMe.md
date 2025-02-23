@@ -30,9 +30,6 @@ This repository contains my assignments related to **HTML, CSS, and Bootstrap**.
    ```  
 2. Open the HTML files in a browser.
 
-## 📷 Screenshots
-(Add screenshots of your project here)
-
 ## 📝 Notes
 - Bootstrap was used to enhance responsiveness.
 - CSS animations were implemented for UI improvements.
