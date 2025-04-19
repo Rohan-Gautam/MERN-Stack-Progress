@@ -35,6 +35,7 @@ body {
 
 /* Menu Container */
 .menu-container {
+    margin-top: 5vh;
     background: rgba(20, 20, 30, 0.5);
     padding: 2vh;
     border-radius: 3vh;
