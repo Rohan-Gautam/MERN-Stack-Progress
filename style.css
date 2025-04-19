@@ -16,7 +16,7 @@ body {
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: cyan;/* Dark grey color */
+    color: cyan;
     font-size: 30px;
     animation: floatAnimation 5s infinite;
 }
@@ -41,24 +41,37 @@ body {
     border: 2px solid #00ffcc;
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    max-width: 90vw;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 15px;
+    width: 80vw;
+    max-width: 80vw;
+    height: 80vh;
+    max-height: 80vh;
+    overflow-x: auto;
+    overflow-y: auto;
     backdrop-filter: blur(12px);
+    box-sizing: border-box;
 }
 
 /* Individual Menu Cards */
 .menu {
     background: linear-gradient(145deg, #1c1c2e, #14141f);
-    padding: 25px;
+    padding: 20px;
     border-radius: 15px;
     border: 1px solid #ff00ff;
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.2), 0 0 30px rgba(0, 255, 204, 0.1);
-    width: 300px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 22%;
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
 }
 
 /* Hover Effect */
@@ -71,8 +84,8 @@ body {
 /* Menu Heading */
 .menu h2 {
     color: #00ffcc;
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 12px;
     text-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
 }
 
@@ -80,12 +93,14 @@ body {
 .menu ul {
     list-style: none;
     padding: 0;
+    flex-grow: 1;
+    overflow-y: auto;
 }
 
 /* List Items */
 .menu li {
-    margin: 15px 0;
-    font-size: 18px;
+    margin: 12px 0;
+    font-size: 16px;
     font-weight: 600;
     color: #e0e0e0;
     transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
@@ -102,7 +117,7 @@ body {
 .menu ul a {
     text-decoration: none;
     display: block;
-    padding: 10px 0;
+    padding: 8px 0;
     border-radius: 8px;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -111,4 +126,66 @@ body {
 .menu ul a:hover {
     background: rgba(255, 0, 255, 0.15);
     box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .menu {
+        min-width: 180px;
+        max-width: 23%;
+        padding: 15px;
+    }
+    .menu h2 {
+        font-size: 18px;
+    }
+    .menu li {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 10px;
+        gap: 10px;
+    }
+    .menu {
+        min-width: 150px;
+        max-width: 24%;
+        padding: 12px;
+    }
+    .menu h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .menu li {
+        font-size: 13px;
+        margin: 8px 0;
+    }
+    .header-text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        padding: 8px;
+        gap: 8px;
+    }
+    .menu {
+        min-width: 120px;
+        max-width: 24%;
+        padding: 10px;
+    }
+    .menu h2 {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .menu li {
+        font-size: 12px;
+        margin: 6px 0;
+    }
+    .header-text {
+        font-size: 20px;
+    }
 }
