@@ -11,13 +11,20 @@ body {
     overflow-x: hidden;
 }
 
+.header{
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .header-text {
     position: absolute;
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: cyan;/* Dark grey color */
-    font-size: 30px;
+    font-size: 2vw;
     animation: floatAnimation 5s infinite;
 }
 
